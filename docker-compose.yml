@@ -3,12 +3,12 @@ services:
   postgres:
     image: postgres:latest
     environment:
-      POSTGRES_DB: "teacher"
-      POSTGRES_USER: "teacher"
-      POSTGRES_PASSWORD: "teacher"
+      POSTGRES_DB: "VESELOV_206"
+      POSTGRES_USER: "VESELOV_206"
+      POSTGRES_PASSWORD: "VESELOV_206"
       PGDATA: "/var/lib/postgresql/data/pgdata"
     volumes:
-      - docker/db/scripts:/docker-entrypoint-initdb.d
-      - dz:/var/lib/postgresql/data
+      - ./docker/db/scripts:/docker-entrypoint-initdb.d
+      - ./dz:/var/lib/postgresql/data
     ports:
       - "5432:5432"
